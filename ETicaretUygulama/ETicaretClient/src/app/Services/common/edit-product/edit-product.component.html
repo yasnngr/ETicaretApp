@@ -1,0 +1,59 @@
+<button disabled="true" pButton pRipple (click)="showDialog()" pTooltip="Edit product" text="true"
+    class="p-button-rounded p-button-warning"></button>
+<p-dialog header="Edit Product" [modal]="true" [(visible)]="visible" [style]="{ width: '65rem' }">
+    <span class="p-text-secondary block mb-5">Update your information.</span>
+    <div class="flex align-items-center gap-3 mb-3">
+        <label for="productName" class="font-semibold w-6rem">Product Name</label>
+        <input pInputText id="productName" class="flex-auto" autocomplete="off"/>
+    </div>
+    <div class="flex align-items-center gap-3 mb-3">
+        <label for="price" class="font-semibold w-6rem">Price</label>
+        <p-inputNumber id="price" inputId="currency-us" mode="currency" currency="USD" locale="en-US"></p-inputNumber>
+    </div>
+    <div class="flex align-items-center gap-3 mb-3">
+        <label for="stock" class="font-semibold w-6rem">Stock</label>
+        <p-inputNumber id="stock" inputId="integeronly" [showButtons]="true" [min]="1" [max]="1000"> </p-inputNumber>
+    </div>
+    <p-carousel 
+    [value]="images" 
+    [numVisible]="3" 
+    [numScroll]="3" 
+    [circular]="true"
+    [responsiveOptions]="responsiveOptions" 
+    autoplayInterval="3000">
+        <ng-template pTemplate="item" let-image>
+            <div class="border-1 surface-border border-round m-2 p-3">
+                <div class="mb-3">
+                    <div class="relative mx-auto w-full h-20rem ">
+                        <img
+                            [src]="image.path" 
+                            class="w-full h-full border-round"/>
+                    </div>
+                </div>
+                <div class="mb-3 text-xs h-1rem">
+                    {{ image.fileName}}
+                </div>
+                <div class="flex justify-content-between align-items-center">
+                        <button pButton label="Delete" icon="pi pi-times" class="p-button-danger" [text]="true" (click)="deleteImage(image.id)"></button>
+                </div>
+            </div>
+    </ng-template>
+</p-carousel>
+    <div class="flex justify-content-end gap-2">
+        <button pButton label="Save" (click)="visible = false" pButton></button>
+    </div>
+</p-dialog>
+<!-- <div>
+    <div *ngIf="images" class="grid">
+        <div *ngFor="let image of images; let index = index" class="col-4" key="index">
+            <img class="w-25rem h-25rem" [src]="image.path" style="cursor: pointer" (click)="imageClick(index)" />
+        </div>
+    </div>
+    <p-galleria [value]="images" [(visible)]="displayCustom" [(activeIndex)]="activeIndex"
+        [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '850px' }" [numVisible]="7"
+        [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false">
+        <ng-template pTemplate="images" let-images>
+            <img [src]="images.path" style="width: 100%; display: block;" />
+        </ng-template>
+    </p-galleria>
+</div> -->

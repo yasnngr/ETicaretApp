@@ -1,0 +1,61 @@
+<div class="grid grid-nogutter mt-8">
+    <div class="col"></div>
+    <div class="col-12 md:col-12 lg:col-3">
+        <label class="flex justify-content-center mb-2 text-2xl font-semibold">Login</label>
+        <div class="border-1 p-3 border-round-2xl  border-blue-700 shadow-8 bg-cover bg-center"
+            style="background-image: url('assets/registerBackGround.jpg');">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+                <div class="grid grid-nogutter">
+                    <div class="col-12 md:col-12 lg:col-12 mt-7">
+                            <p-iconField iconPosition="left">
+                                <p-inputIcon styleClass="pi pi-user"/>
+                                <input id="userNameOrEmail" formControlName="usernameOrEmail" class="w-full h-3rem" type="text"
+                            placeholder="Username or E-Mail" pInputText />
+                            </p-iconField>
+                        <div class="flex justify-content-start">
+                            @if (loginForm.get('usernameOrEmail').touched && loginForm.get('usernameOrEmail').invalid)
+                            {
+                            <small class="text-red-400">This input cannot be empty</small>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-12 lg:col-12 mt-4">
+                        <p-password 
+                            formControlName="password" 
+                            inputStyleClass=" h-3rem w-full" 
+                            styleClass="w-full"
+                            id="password" [toggleMask]="true" 
+                            feedback="false" 
+                            placeholder="Password">
+                        </p-password>
+                        @if (loginForm.touched && loginForm.invalid && !loginForm.dirty) {
+                        <small class="text-red-400">Password cannot be empty.</small>
+                        }
+                    </div>
+                    <div class="col-12 md:col-12 lg:col-12 mt-3">
+                        <div class="flex justify-content-center align-items-center">
+                            <!-- <p-button styleClass="text-sm" [text]="true" icon="pi pi-google" label="Sign in with Google"  severity="contrast" /> -->
+                            <asl-google-signin-button shape="pill" theme="filled_black" type='standard' size='medium'></asl-google-signin-button>
+                        </div>
+                        <div class="flex justify-content-center align-items-center">
+                            <p-button styleClass="text-sm" icon="pi pi-facebook" label="Sign in with Facebook" [text]="true" severity="contrast" />
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-12 lg:col-12 mt-3 ">
+                        <div class="flex justify-content-center align-items-center">
+                            <label for="link" class="text-xs text-color-secondary select-none">New to ETicaretDb?</label>
+                            <a routerLink="/register"
+                                class="pl-1 text-sm cursor-pointer no-underline hover:text-cyan-500 text-primary">Create a new account</a>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-12 lg:col-12 mt-1">
+                        <p-button class="flex justify-content-end transition-duration-300" severity="success"
+                            [raised]="true" label="Login" icon="pi pi-angle-right" [raised]="true" [text]="true"
+                            type="submit" [disabled]="loginForm.invalid" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>

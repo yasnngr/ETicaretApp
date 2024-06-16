@@ -1,0 +1,91 @@
+<label class="flex justify-content-start mt-1  text-blue-300">Product Create</label>
+<form [formGroup]="productForm"
+    (ngSubmit)="onSubmit(productForm.value)">
+    <div class="grid grid-nogutter flex-wrap">
+        <div class="col-12 lg:col-8">
+            <div class="text-center pt-1  border-round-sm">
+                <div class="grid formgrid">
+                    <div class="col-12 lg:col-12 field">
+                        <p-floatLabel>
+                            <input formControlName="productName" pInputText id="name" class="w-full" />
+                            <label for="name">Product Name</label>
+                        </p-floatLabel>
+                        <div class="flex justify-content-start">
+                            @if (productForm.get('productName').hasError('minlength')) {
+                            <small id="username-help" class="text-red-700">Product name must be 5 to 150
+                                characters.</small>
+                            }@else if (productForm.get('productName').touched && productForm.get('productName').invalid)
+                            {
+                            <small id="username-help" class="text-red-700">Product name cannot be empty</small>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-12 lg:col-6 field">
+                        <p-floatLabel>
+                            <p-inputNumber formControlName="productPrice" id="price" inputId="currency-us"
+                                mode="currency" currency="USD" class="w-full" styleClass="w-full" locale="en-US" />
+                            <label for="price">Price</label>
+                        </p-floatLabel>
+                        <div class="flex justify-content-start">
+                            @if (productForm.get('productPrice').hasError('min')) {
+                            <small id="username-help" class="text-red-700">Price cannot be zero</small>
+                            }@else if (productForm.get('productPrice').touched &&
+                            productForm.get('productPrice').invalid) {
+                            <small id="username-help" class="text-red-700">Price cannot be empty</small>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-12 lg:col-6 field">
+                        <p-floatLabel>
+                            <input formControlName="productStock" pInputText id="stock" class="w-full"
+                                pKeyFilter="money" />
+                            <label for="stock">Stock</label>
+                        </p-floatLabel>
+                        <div class="flex justify-content-start">
+                            @if (productForm.get('productStock').touched && productForm.get('productStock').invalid) {
+                            <small id="username-help" class="text-red-700">Stock cannot be empty</small>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-12 lg:col-12">
+                        <label class="flex justify-content-start mb-1 text-600 select-none">Description</label>
+                        <p-editor [style]="{ height: '210px' }" />
+                    </div>
+                    <div class="col-12 lg:col-12 mt-3">
+                        <label class="flex justify-content-start mb-1 text-600 select-none">Select Images</label>
+                        <app-file-upload></app-file-upload>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 lg:col-4">
+            <div class="pt-1 pl-3">
+                <div class="grid formgrid">
+                    <div class="col-12 lg:col-12 field">
+                        <p-floatLabel>
+                            <p-dropdown styleClass="w-full" [options]="categories" [filter]="true" filterBy="name"
+                                optionLabel="name" [showClear]="true" inputId="float-label" />
+                            <label for="float-label">Select a Category</label>
+                        </p-floatLabel>
+                    </div>
+                    <div class="col-12 lg:col-12 field">
+                        <div class="card p-fluid">
+                            <p-floatLabel>
+                                <p-chips id="chips" />
+                                <label for="chips">Tags</label>
+                            </p-floatLabel>
+                        </div>
+                    </div>
+                    <div class="col-12 lg:col-12 field">
+                        <div class="flex justify-content-end">
+                            <p-button label="Save" icon="pi pi-check" type="submit" [disabled]="!productForm.valid"
+                                pTooltip="Save and send product." tooltipPosition="left"></p-button>
+                            <p-button class="ml-1" label="Cancel" icon="pi pi-times" severity="danger"
+                                (onClick)="onReset()" pTooltip="Reset all input." tooltipPosition="right"></p-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

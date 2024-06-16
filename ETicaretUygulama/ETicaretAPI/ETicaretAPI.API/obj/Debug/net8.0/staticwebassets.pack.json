@@ -1,0 +1,81 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\Ekran-görüntüsü-2024-04-13-130634-18052024-122412.png",
+      "PackagePath": "staticwebassets\\product-image\\Ekran-görüntüsü-2024-04-13-130634-18052024-122412.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\Ekran-görüntüsü-2024-04-17-211600-17052024-153613.png",
+      "PackagePath": "staticwebassets\\product-image\\Ekran-görüntüsü-2024-04-17-211600-17052024-153613.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\Ekran-görüntüsü-2024-04-17-211600-18052024-122412.png",
+      "PackagePath": "staticwebassets\\product-image\\Ekran-görüntüsü-2024-04-17-211600-18052024-122412.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\Ekran-görüntüsü-2024-05-02-213227-17052024-153519.png",
+      "PackagePath": "staticwebassets\\product-image\\Ekran-görüntüsü-2024-05-02-213227-17052024-153519.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\Ekran-görüntüsü-2024-05-02-213227-17052024-153823.png",
+      "PackagePath": "staticwebassets\\product-image\\Ekran-görüntüsü-2024-05-02-213227-17052024-153823.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\Ekran-görüntüsü-2024-05-02-213227-18052024-122412.png",
+      "PackagePath": "staticwebassets\\product-image\\Ekran-görüntüsü-2024-05-02-213227-18052024-122412.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\Ekran-görüntüsü-2024-05-03-222524-17052024-153300.png",
+      "PackagePath": "staticwebassets\\product-image\\Ekran-görüntüsü-2024-05-03-222524-17052024-153300.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\Ekran-görüntüsü-2024-05-03-222524-17052024-153626.png",
+      "PackagePath": "staticwebassets\\product-image\\Ekran-görüntüsü-2024-05-03-222524-17052024-153626.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\GHQnwS7XMAAVKFA-17052024-153823.jpg",
+      "PackagePath": "staticwebassets\\product-image\\GHQnwS7XMAAVKFA-17052024-153823.jpg"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\createInstance-1-17052024-153454.png",
+      "PackagePath": "staticwebassets\\product-image\\createInstance-1-17052024-153454.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\createInstance-1-17052024-153634.png",
+      "PackagePath": "staticwebassets\\product-image\\createInstance-1-17052024-153634.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\span-17052024-153454.png",
+      "PackagePath": "staticwebassets\\product-image\\span-17052024-153454.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\span-17052024-153823.png",
+      "PackagePath": "staticwebassets\\product-image\\span-17052024-153823.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\span-17052024-154445.png",
+      "PackagePath": "staticwebassets\\product-image\\span-17052024-154445.png"
+    },
+    {
+      "Id": "E:\\Yazılım\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\wwwroot\\product-image\\xxlarge-17052024-154403.jpg",
+      "PackagePath": "staticwebassets\\product-image\\xxlarge-17052024-154403.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ETicaretAPI.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ETicaretAPI.API.props",
+      "PackagePath": "build\\ETicaretAPI.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ETicaretAPI.API.props",
+      "PackagePath": "buildMultiTargeting\\ETicaretAPI.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ETicaretAPI.API.props",
+      "PackagePath": "buildTransitive\\ETicaretAPI.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

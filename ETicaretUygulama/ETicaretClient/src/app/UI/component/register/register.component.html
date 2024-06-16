@@ -1,0 +1,106 @@
+<div class="grid grid-nogutter mt-8">
+    <div class="col"></div>
+    <div class="col-12 md:col-12 lg:col-3">
+        <label class="flex justify-content-center mb-2 text-2xl font-semibold">Create Account</label>
+        <div class="border-1 p-3 border-round-2xl border-blue-700 shadow-8 bg-cover bg-center" style="background-image: url('assets/registerBackGround.jpg');">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+            <div class="grid grid-nogutter">
+                <div class="col-12 md:col-12 lg:col-12 mt-3 ">
+                    <label for="nameSurname" class="text-xs text-color-secondary select-none">Name</label>
+                    <input id="nameSurname" formControlName="nameSurname" class="w-full h-3rem" type="text" placeholder="First and Lastname" pInputText />
+                    <div class="flex justify-content-start">
+                        @if (registerForm.get('nameSurname').hasError('minlength') || registerForm.get('nameSurname').hasError('maxlength')) {
+                        <small class="text-red-400">Name surname must be 3 to 30 characters.</small>
+                        }@else if (registerForm.get('nameSurname').touched && registerForm.get('nameSurname').invalid)
+                        {
+                        <small class="text-red-400">Name surname cannot be empty</small>
+                        }
+                    </div>
+                </div>
+                <div class="col-12 md:col-12 lg:col-12 mt-2">
+                    <label for="userName" class="text-xs text-color-secondary select-none">Username</label>
+                    <input id="userName" formControlName="userName" class="w-full h-3rem" type="text" placeholder="Username" pInputText />
+                    <div class="flex justify-content-start">
+                        @if (registerForm.get('userName').hasError('minlength') || registerForm.get('userName').hasError('maxlength')) {
+                        <small class="text-red-400">Username must be 5 to 30 characters.</small>
+                        }@else if (registerForm.get('userName').touched && registerForm.get('userName').invalid)
+                        {
+                        <small class="text-red-400">Username cannot be empty</small>
+                        }
+                    </div>
+                </div>
+                <div class="col-12 md:col-12 lg:col-12 mt-2 ">
+                    <label for="emailAdress" class="text-xs text-color-secondary select-none">E-Mail Adress</label>
+                    <input id="emailAdress" formControlName="email" class="w-full h-3rem" type="email" placeholder="E-Mail Adress" pInputText />
+                    <div class="flex justify-content-start">
+                        @if (registerForm.get('email').hasError('minlength')) 
+                        {
+                            <small id="username-help" class="text-red-400">Email cannot be less than 3 characters.</small>
+                        }@else if(registerForm.get('email').hasError('email')) 
+                        {
+                            <small class="text-red-400">Enter in email format.</small>
+                        }@else if (registerForm.get('email').touched && registerForm.get('email').invalid)
+                        {
+                            <small class="text-red-400">Email cannot be empty</small>
+                        }
+                    </div>
+                </div>
+                <div class="col-12 md:col-12 lg:col-12 mt-2">
+                    <label for="password" class="text-xs text-color-secondary select-none">Password</label>
+                            <p-password 
+                            formControlName="password"
+                            inputStyleClass=" h-3rem w-full" 
+                            styleClass="w-full"
+                            id="password" 
+                            [toggleMask]="true"
+                            [feedback]="false"
+                            placeholder="Password">
+                        </p-password>
+                        <div class="flex justify-content-start">
+                            <small [class]="getPasswordValidationClass('hasUpperCase')">A Capital Letter</small>
+                            <small [class]="getPasswordValidationClass('hasNumber')">A Number</small>
+                            <small [class]="getPasswordValidationClass('hasSpecialChar')">A Special Char</small>
+                        </div>
+                         @if (password.touched && password.invalid && !password.dirty) {
+                            <small class="text-red-400">Password cannot be empty.</small>
+                        }
+                        @if (registerForm.get('password').hasError('minlength')) 
+                        {
+                            <small class="text-red-400">Password must be at least 5 characters. </small>
+                        }
+                </div>
+                <div class="col-12 md:col-12 lg:col-12 mt-2">
+                    <label for="comfirmPassword" class="text-xs text-color-secondary select-none">Confirm Password</label>
+                        <p-password 
+                            inputStyleClass=" h-3rem w-full" 
+                            formControlName="confirmPassword"
+                            styleClass="w-full"
+                            id="comfirmPassword" 
+                            [toggleMask]="false"
+                            placeholder="Re-Enter Password"
+                            feedback="false"
+                            variant="filled">
+                        </p-password>
+                        @if (registerForm.get('confirmPassword').touched && registerForm.get('confirmPassword').invalid)
+                        {
+                            <small class="text-red-400">Comfirm password cannot be empty</small>
+                        }@else if (registerForm.hasError('notSame')) 
+                        {
+                            <small class="text-red-400">Password does not match</small>
+                        }
+                </div>
+                <div class="col-12 md:col-12 lg:col-12 mt-5 ">
+                    <div class="flex justify-content-center align-items-center">
+                        <label class="text-xs text-color-secondary select-none">Already have an account?</label>
+                        <a routerLink="/login" class="pl-1 text-sm cursor-pointer no-underline hover:text-cyan-500 text-primary">Go</a>
+                    </div>
+                </div>
+                <div class="col-12 md:col-12 lg:col-12 mt-4">
+                    <p-button class="flex justify-content-end transition-duration-300" severity="success" [raised]="true" label="Confirm" icon="pi pi-check" [raised]="true"  type="submit" [disabled]="registerForm.invalid"/>
+                </div>
+            </div>
+        </form>  
+    </div>  
+    </div>
+    <div class="col"></div>
+</div>

@@ -1,0 +1,17 @@
+#sidebarButton {
+    height: 35px;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: transparent;
+    border-color: transparent;
+    transition: background-color 0.4s ease;
+}
+
+#sidebarButton:hover {
+    background-color: rgb(42, 52, 189);
+}
+#sidebarButton:hover i{
+    color: rgb(255, 255, 255) !important;
+}
