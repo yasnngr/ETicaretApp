@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\createInstance-1-17052024-153454.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x-22062024-124640.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ETicaretAPI.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/createInstance-1-17052024-153454.png</RelativePath>
+      <RelativePath>product-image/Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x-22062024-124640.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14,14 +14,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\createInstance-1-17052024-153454.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x-22062024-124640.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\createInstance-1-17052024-153634.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x-22062024-124908.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ETicaretAPI.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/createInstance-1-17052024-153634.png</RelativePath>
+      <RelativePath>product-image/Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x-22062024-124908.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -30,14 +30,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\createInstance-1-17052024-153634.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x-22062024-124908.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-04-13-130634-18052024-122412.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x-22062024-135710.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ETicaretAPI.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/Ekran-görüntüsü-2024-04-13-130634-18052024-122412.png</RelativePath>
+      <RelativePath>product-image/Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x-22062024-135710.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -46,14 +46,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-04-13-130634-18052024-122412.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x-22062024-135710.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-04-17-211600-17052024-153613.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Efe9k0TvJDUtfY5-22062024-124645.png))">
       <SourceType>Package</SourceType>
       <SourceId>ETicaretAPI.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/Ekran-görüntüsü-2024-04-17-211600-17052024-153613.png</RelativePath>
+      <RelativePath>product-image/Efe9k0TvJDUtfY5-22062024-124645.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -62,14 +62,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-04-17-211600-17052024-153613.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Efe9k0TvJDUtfY5-22062024-124645.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-04-17-211600-18052024-122412.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Efe9k0TvJDUtfY5-22062024-124908.png))">
       <SourceType>Package</SourceType>
       <SourceId>ETicaretAPI.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/Ekran-görüntüsü-2024-04-17-211600-18052024-122412.png</RelativePath>
+      <RelativePath>product-image/Efe9k0TvJDUtfY5-22062024-124908.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -78,14 +78,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-04-17-211600-18052024-122412.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Efe9k0TvJDUtfY5-22062024-124908.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-02-213227-17052024-153519.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Efe9k0TvJDUtfY5-22062024-135710.png))">
       <SourceType>Package</SourceType>
       <SourceId>ETicaretAPI.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/Ekran-görüntüsü-2024-05-02-213227-17052024-153519.png</RelativePath>
+      <RelativePath>product-image/Efe9k0TvJDUtfY5-22062024-135710.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -94,151 +94,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-02-213227-17052024-153519.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-02-213227-17052024-153823.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>ETicaretAPI.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/Ekran-görüntüsü-2024-05-02-213227-17052024-153823.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-02-213227-17052024-153823.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-02-213227-18052024-122412.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>ETicaretAPI.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/Ekran-görüntüsü-2024-05-02-213227-18052024-122412.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-02-213227-18052024-122412.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-03-222524-17052024-153300.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>ETicaretAPI.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/Ekran-görüntüsü-2024-05-03-222524-17052024-153300.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-03-222524-17052024-153300.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-03-222524-17052024-153626.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>ETicaretAPI.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/Ekran-görüntüsü-2024-05-03-222524-17052024-153626.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Ekran-görüntüsü-2024-05-03-222524-17052024-153626.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\GHQnwS7XMAAVKFA-17052024-153823.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ETicaretAPI.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/GHQnwS7XMAAVKFA-17052024-153823.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\GHQnwS7XMAAVKFA-17052024-153823.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\span-17052024-153454.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>ETicaretAPI.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/span-17052024-153454.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\span-17052024-153454.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\span-17052024-153823.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>ETicaretAPI.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/span-17052024-153823.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\span-17052024-153823.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\span-17052024-154445.png))">
-      <SourceType>Package</SourceType>
-      <SourceId>ETicaretAPI.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/span-17052024-154445.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\span-17052024-154445.png))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\xxlarge-17052024-154403.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>ETicaretAPI.API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ETicaretAPI.API</BasePath>
-      <RelativePath>product-image/xxlarge-17052024-154403.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\xxlarge-17052024-154403.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\product-image\Efe9k0TvJDUtfY5-22062024-135710.png))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

@@ -12,7 +12,6 @@ import { getTokenFunck } from './Services/common/tokenGetter/getTokenFunc';
 import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
 import { HttpErrorHandlerInterceptorService } from './Services/common/http-error-handler-interceptor.service';
 
-
 export const appConfig: ApplicationConfig = {
   providers: 
   [

@@ -17,6 +17,7 @@ export const routes: Routes = [
     {path:"",component:HomeComponent},
     {path:"baskets",loadComponent:()=>import("./UI/component/baskets/baskets.component").then(x=>x.BasketsComponent)},
     {path:"products",loadComponent:()=>import("./UI/component/products/products.component").then(x=>x.ProductsComponent)},
+    {path:"products/:pageNo",loadComponent:()=>import("./UI/component/products/products.component").then(x=>x.ProductsComponent)},
     {path:"register",loadComponent:()=>import("./UI/component/register/register.component").then(x=>x.RegisterComponent)},
     {path:"login",loadComponent:()=>import("./UI/component/login/login.component").then(x=>x.LoginComponent)}
 ];

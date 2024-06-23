@@ -5,6 +5,7 @@ using ETicaretAPI.Application.Validators.Products;
 using ETicaretAPI.Infrastructure;
 using ETicaretAPI.Infrastructure.Filters;
 using ETicaretAPI.Infrastructure.Services.Storage.Azure;
+using ETicaretAPI.Infrastructure.Services.Storage.Local;
 using ETicaretAPI.Persistence;
 using ETicaretAPI.SignalR;
 using FluentValidation;
@@ -27,7 +28,7 @@ builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationService();
 builder.Services.AddSignalRServices();
 
-builder.Services.AddStorage<AzureStorage>();
+builder.Services.AddStorage<LocalStorage>();
 builder.Services.AddCors(option => option.AddDefaultPolicy(policy =>
     policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials()
 ));

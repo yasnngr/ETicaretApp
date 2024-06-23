@@ -42,6 +42,11 @@ export class EditProductComponent extends BaseComponent{
    }
 
 
+   showCase(imageId:string){
+    console.log("imageId="+imageId, "productId="+this.productInfo.id)
+    this.productService.changeShowcaseImage(imageId,this.productInfo.id)
+   }
+
   showDialog() {
     this.showSpinner();
     this.getImages();
@@ -49,10 +54,10 @@ export class EditProductComponent extends BaseComponent{
   }
   getImages(){
     this.productService.readImages(this.productInfo.id).subscribe({
-      next: (datas) => {
+      next: (imageDatas:List_Product_Images[]) => {
+        console.log(imageDatas)
         this.hideSpinner()
-        this.images = datas;
-        console.log(datas);
+        this.images = imageDatas;
       }
     })
   }

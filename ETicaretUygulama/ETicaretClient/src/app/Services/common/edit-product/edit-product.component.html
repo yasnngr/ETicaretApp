@@ -18,10 +18,10 @@
     [value]="images" 
     [numVisible]="3" 
     [numScroll]="3" 
-    [circular]="true"
     [responsiveOptions]="responsiveOptions" 
     autoplayInterval="3000">
         <ng-template pTemplate="item" let-image>
+            <input type="radio" name="showcase" (click)="showCase(image.id)" [checked]="image.showcase">
             <div class="border-1 surface-border border-round m-2 p-3">
                 <div class="mb-3">
                     <div class="relative mx-auto w-full h-20rem ">

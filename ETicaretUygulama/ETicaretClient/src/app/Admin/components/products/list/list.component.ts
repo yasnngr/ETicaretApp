@@ -93,7 +93,7 @@ export class ListComponent extends BaseComponent {
             next: (datas) => {
                 this.hideSpinner()
                 this.products = datas.products;
-                this.totalCount = datas.totalCount
+                this.totalCount = datas.totalProductCount
             },
             error: (error: HttpErrorResponse) => {
                 this.hideSpinner()

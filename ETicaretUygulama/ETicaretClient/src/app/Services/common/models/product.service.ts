@@ -4,9 +4,10 @@ import { Create_Product } from '../../../Contracts/Create_Product';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { AlertService } from '../../admin/alert.service';
-import { Observable } from 'rxjs';
+import { Observable, firstValueFrom, lastValueFrom } from 'rxjs';
 import { Read_Product } from '../../../Contracts/Read_Product';
 import { List_Product_Images } from '../../../Contracts/List_Product_Images';
+import { List_Product } from '../../../Contracts/List_Product';
 
 
 @Injectable({
@@ -66,6 +67,16 @@ export class ProductService {
     }, productId)
   }
 
+  changeShowcaseImage(imageId:string,productId:string){
+   this.httpClientService.get({
+      controller:"products",
+      action:"ChangeShowcaseImage",
+      queryString:`imageId=${imageId}&productId=${productId}`
+    }).subscribe(res=>{
+      console.log(res)
+    });
+  }
+
 }
 // async read(successCallBack?: () => void, errorCallBack?: (errorMessage: string) => void): Promise<List_Product[]> {
 //   let responseModel:List_Product[]=null;
@@ -87,4 +98,11 @@ export class ProductService {
 //     controller:"products"
 //   },id)
 //   await firstValueFrom(deleteObservable)
+// }
+// async readAsync(page:number=0, size : number =5):Promise<Read_Product>{
+//   const observable= this.httpClientService.get<{totalProductCount:number; products:List_Product[]}>({
+//     controller:"products",
+//     queryString : `page=${page}&size=${size}`
+//   })
+//  return await lastValueFrom(observable)
 // }

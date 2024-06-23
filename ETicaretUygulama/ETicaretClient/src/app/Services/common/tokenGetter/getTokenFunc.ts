@@ -1,3 +1,6 @@
 export function getTokenFunck(){
-    return localStorage.getItem("accessToken")
+    if (typeof window !== 'undefined' && window.localStorage) {
+        return localStorage.getItem("accessToken");
+      }
+      return null;
 }

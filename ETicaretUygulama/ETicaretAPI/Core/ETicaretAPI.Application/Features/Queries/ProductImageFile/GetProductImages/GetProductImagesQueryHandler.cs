@@ -21,11 +21,12 @@ namespace ETicaretAPI.Application.Features.Queries.ProductImageFile.GetProductIm
             P.Product? product = await _productReadRepository.Table.Include(p => p.ProductImagesFile)
                .FirstOrDefaultAsync(p => p.Id == Guid.Parse(request.Id));
 
-            return product?.ProductImagesFile.Select(p => new GetProductImagesQueryResponse
+            return product.ProductImagesFile.Select(p => new GetProductImagesQueryResponse
             {
                 Path = $"{this._configuration["BaseStorageUrl"]}/{p.Path}",
                 FileName = p.FileName,
                 Id = p.Id,
+                Showcase = p.Showcase
             }).ToList();
         }
     }
