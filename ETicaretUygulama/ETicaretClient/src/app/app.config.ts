@@ -21,12 +21,12 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideHttpClient(withFetch(),withInterceptorsFromDi()),
     provideToastr(),
-    {provide:"baseUrl",useValue:"https://localhost:7243/api",multi:true},
+    {provide:"baseUrl",useValue:"************************",multi:true},
     importProvidersFrom(
       JwtModule.forRoot({
         config:{
           tokenGetter:getTokenFunck,
-          allowedDomains:["localhost:7243"]
+          allowedDomains:["************************"]
         }
       })
     ),
@@ -36,7 +36,7 @@ export const appConfig: ApplicationConfig = {
       providers: [
         {
           id: GoogleLoginProvider.PROVIDER_ID,
-          provider: new GoogleLoginProvider("344736073278-r96kjq5v0m1rqk004inb5ii1nkn60t1g.apps.googleusercontent.com")
+          provider: new GoogleLoginProvider("********************************************************")
         }
       ],
       onError: err => console.log(err)
