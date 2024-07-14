@@ -5,8 +5,18 @@ namespace ETicaretAPI.Application.Abstructions.Services
 {
     public interface IUserService
     {
-        Task<CreateUserResponse> CreateUser(CreateUser model);
+        Task<CreateUserResponse> CreateUserAsync(CreateUser model);
 
-        Task UpdateRefleshToken(string refleshToken,AppUser user,DateTime accessTokenDate, int addOnAccessTokenDate);
+        Task UpdateRefleshTokenAsync(string refleshToken,AppUser user,DateTime accessTokenDate, int addOnAccessTokenDate);
+
+        Task UpdatePasswordAsync(string userId, string resetToken, string newPassword);
+
+        Task<List<ListUser>> GetAllUsersAsync(int page, int size);
+
+        int TotalUsersCount {  get; }
+
+        Task AssignRoleToUserAsync(string userId, string[] roles);
+        Task<string[]> GetRolesToUserAsync(string userIdOrName);
+        Task<bool> HasRolePermissionToEndpointAsync(string name,string code);
     }
 }

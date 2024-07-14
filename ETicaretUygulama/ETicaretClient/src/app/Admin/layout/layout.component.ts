@@ -18,8 +18,6 @@ import { StyleClassModule } from 'primeng/styleclass';
 })
 export class LayoutComponent {
 
-  divStyle = { "width": "280px" }
-
   sidebarVisible: boolean = false;
 
   addClass: Partial<responseCol> = {

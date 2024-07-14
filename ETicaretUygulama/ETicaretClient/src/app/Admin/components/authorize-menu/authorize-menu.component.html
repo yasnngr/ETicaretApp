@@ -1,0 +1,14 @@
+<div class="">
+    <p-tree [value]="nodes" class="w-full md:w-30rem">
+        <ng-template let-node pTemplate="url">
+            <i class="pi pi-user-plus mr-2 cursor-pointer" style="font-size: 1.2rem; color:green;" (click)="authorizeMenuDetail.authorizeMenuDetail(node)" pTooltip="Add Role" tooltipPosition="left"></i>
+            <a rel="noopener noreferrer" class="text-700 ">
+               {{ node.label }}
+            </a>
+        </ng-template>
+        <ng-template let-node pTemplate="default" class="no-underline">
+            <b>{{ node.label }}</b>
+        </ng-template>
+    </p-tree>
+</div>
+<app-dialog-authorize-menu #authorizeMenuDetail></app-dialog-authorize-menu>

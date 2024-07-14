@@ -21,6 +21,7 @@ import { FileUpdateComponent, FileUploadOptions } from '../../../../Services/com
 import { TooltipModule } from 'primeng/tooltip';
 import { EditProductComponent} from '../../../../Services/common/edit-product/edit-product.component';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { DatePipe } from '@angular/common';
 
 @Component({
     selector: 'app-list',
@@ -30,7 +31,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
             ToastModule, ToolbarModule, FileUploadModule, RatingModule,
             TagModule, DialogModule, DropdownModule, RadioButtonModule,
             InputNumberModule, ConfirmDialogModule,FileUpdateComponent,
-            TooltipModule,EditProductComponent],
+            TooltipModule,EditProductComponent,DatePipe],
     templateUrl: './list.component.html',
     styleUrl: './list.component.scss',
 })

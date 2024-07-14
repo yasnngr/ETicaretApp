@@ -1,0 +1,32 @@
+    <p-table 
+        [value]="basketItems" 
+        selectionMode="single" 
+        [paginator]="true" 
+        [rows]="5" 
+        responsiveLayout="scroll">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th pSortableColumn="name">
+                        Name <p-sortIcon field="name" />
+                    </th>
+                    <th>Image</th>
+                    <th pSortableColumn="price">
+                        Price <p-sortIcon field="price" />
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-basketItem>
+                <tr [pSelectableRow]="rowData">
+                    <td>
+                        {{ basketItem.name }}
+                    </td>
+                    <td>
+                        <img 
+                        [src]="getProductImageSrc(basketItem)"
+                            [alt]="basketItem.image" 
+                            class="w-5rem shadow-2" />
+                    </td>
+                    <td>{{ basketItem.price | currency:"₺" }}</td>
+                </tr>
+            </ng-template>
+    </p-table>

@@ -14,10 +14,14 @@ import { AlertService } from '../../../Services/admin/alert.service';
 export class DashboardComponent implements OnInit {
 
 constructor(private signalRService:SignalRService,private alertService:AlertService) {
-  signalRService.start(HubUrls.ProductHub)
+
 }
   ngOnInit(): void {
-    this.signalRService.on(ReceiveFunc.ProductAddedMessageReceiveFunc,message=>{
+    this.signalRService.on(HubUrls.ProductHub ,ReceiveFunc.ProductAddedMessageReceiveFunc,message=>{
+      this.alertService.infoMessage(message)
+    });
+
+    this.signalRService.on(HubUrls.OrderHub,ReceiveFunc.OrderAddedMessageReceiveFunc,message=>{
       this.alertService.infoMessage(message)
     });
   }

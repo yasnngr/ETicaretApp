@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HubConnection, HubConnectionBuilder, HubConnectionState } from '@microsoft/signalr';
 
 @Injectable({
@@ -6,16 +6,12 @@ import { HubConnection, HubConnectionBuilder, HubConnectionState } from '@micros
 })
 export class SignalRService {
 
-  constructor() { }
+  constructor(@Inject("baseSignalRUrl") private baseSignalRUrl : string) { }
 
-  private _conntection : HubConnection;
-
-  get conntection():HubConnection{
-    return this._conntection;
-  }
 
   start(hubUrl:string){//başlatılmış bir hub verecek
-    if(!this.conntection || this._conntection.state==HubConnectionState.Disconnected){
+    hubUrl = this.baseSignalRUrl + hubUrl
+    // if(!this.conntection || this._conntection.state==HubConnectionState.Disconnected){
       
       const builder: HubConnectionBuilder = new HubConnectionBuilder();
       
@@ -30,21 +26,21 @@ export class SignalRService {
             this.start(hubUrl)
           }, 2000);
         })
-        this._conntection = hubConnetion;
-    }
+    // }
 
-    this._conntection.onreconnected(conntectionId=>console.log("reconnected"));//eğer kopan bağlantı yeniden sağlanırsa durum yönetimi yapabiliriz
-    this._conntection.onreconnecting(err=>console.log("reconneting"))//kopan bağlantının tekrardan sağlanma sürecinde olduğunu söylüyor
-    this._conntection.onclose(err=> console.log("close reconnetion"))//kopan bağlantı tekrar bağlanmaya çalışırken bağlanamadığında ortaya çıkan durum yönetimi
+    hubConnetion.onreconnected(conntectionId=>console.log("reconnected"));//eğer kopan bağlantı yeniden sağlanırsa durum yönetimi yapabiliriz
+    hubConnetion.onreconnecting(err=>console.log("reconneting"))//kopan bağlantının tekrardan sağlanma sürecinde olduğunu söylüyor
+    hubConnetion.onclose(err=> console.log("close reconnetion"))//kopan bağlantı tekrar bağlanmaya çalışırken bağlanamadığında ortaya çıkan durum yönetimi
+    return hubConnetion
   }
 
-  invoke(procedureName:string, message:any, successCallBack?:(value)=>void, errorCallBack?:(err)=>void){//event fırlatma mesajı yollama gibi
-    this.conntection.invoke(procedureName,message)
+  invoke(hubUrl:string ,procedureName:string, message:any, successCallBack?:(value)=>void, errorCallBack?:(err)=>void){//event fırlatma mesajı yollama gibi
+    this.start(hubUrl).invoke(procedureName,message)
       .then(successCallBack)
       .catch(errorCallBack);
   }
   
-  on(procedureName:string, callBack:(...message)=>void){//alıcı fonksiyonlar. serverdan gelen veriler
-    this.conntection.on(procedureName,callBack)
+  on(hubUrl:string ,procedureName:string, callBack:(...message)=>void){//alıcı fonksiyonlar. serverdan gelen veriler
+    this.start(hubUrl).on(procedureName,callBack)
   }
 }

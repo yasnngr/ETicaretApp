@@ -8,6 +8,8 @@ import { ProductService } from '../../../../Services/common/models/product.servi
 import { List_Product } from '../../../../Contracts/List_Product';
 import { ActivatedRoute, Route, Router, RouterLink } from '@angular/router';
 import {  mergeMap } from 'rxjs';
+import { BasketService } from '../../../../Services/common/models/basket.service';
+import { SpinnerService } from '../../../../Services/admin/spinner/spinner.service';
 
 @Component({
   selector: 'app-list',
@@ -18,7 +20,7 @@ import {  mergeMap } from 'rxjs';
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
-export class ListComponent implements OnInit, OnChanges {
+export class ListComponent implements OnInit {
   first: number = 0;
   rows: number = 12;
   products: List_Product[];
@@ -26,13 +28,12 @@ export class ListComponent implements OnInit, OnChanges {
   totalProductCount:number;
   currentPageNo: number;
 
-  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute,private route : Router) {
+  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute
+    ,private route : Router, private basketService:BasketService,private spinner:SpinnerService) {
     
   
   }
-  ngOnChanges(changes: SimpleChanges): void {
-    
-  }
+ 
 
   ngOnInit(): void {
     this.activatedRoute.params.pipe(
@@ -66,6 +67,14 @@ export class ListComponent implements OnInit, OnChanges {
       }
     }
     return 'assets/default-product-image.webp';
+  }
+  addToBasket(productId:string){
+    this.spinner.showSpinner()
+    this.basketService.add({
+      productId:productId,
+      quantity : 1
+    })
+    this.spinner.hideSpinner()
   }
 }
 

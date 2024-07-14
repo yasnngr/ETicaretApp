@@ -9,8 +9,13 @@
                     <div class="col-12 md:col-12 lg:col-12 mt-7">
                             <p-iconField iconPosition="left">
                                 <p-inputIcon styleClass="pi pi-user"/>
-                                <input id="userNameOrEmail" formControlName="usernameOrEmail" class="w-full h-3rem" type="text"
-                            placeholder="Username or E-Mail" pInputText />
+                                <input 
+                                    id="userNameOrEmail" 
+                                    formControlName="usernameOrEmail" 
+                                    class="w-full h-3rem" 
+                                    type="text"
+                                    placeholder="Username or E-Mail" 
+                                    pInputText />
                             </p-iconField>
                         <div class="flex justify-content-start">
                             @if (loginForm.get('usernameOrEmail').touched && loginForm.get('usernameOrEmail').invalid)
@@ -39,6 +44,13 @@
                         </div>
                         <div class="flex justify-content-center align-items-center">
                             <p-button styleClass="text-sm" icon="pi pi-facebook" label="Sign in with Facebook" [text]="true" severity="contrast" />
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-12 lg:col-12 mt-3 ">
+                        <div class="flex justify-content-center align-items-center">
+                            <label for="link" class="text-xs text-color-secondary select-none">Forgot your password?</label>
+                            <a routerLink="/password-reset"
+                                class="pl-1 text-sm cursor-pointer no-underline hover:text-cyan-500 text-primary">Reset password</a>
                         </div>
                     </div>
                     <div class="col-12 md:col-12 lg:col-12 mt-3 ">

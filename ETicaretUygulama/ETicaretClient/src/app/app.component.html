@@ -1,41 +1,133 @@
-    <div class="grid border-bottom-1 grid-nogutter">
-        <div class="col-12 md:col-12 lg:col-4">
-            <div class="flex align-items-center justify-content-start h-4rem ml-2">
-                <div class="">
-                    <i class="pi pi-home mr-1 text-primary" style="font-size: 0.9rem"></i>
-                    <a href="" class="no-underline text-primary" routerLink="">Home</a>
-                </div>
-                <div class="ml-3">
-                  <i class="pi pi-home mr-1 text-primary" style="font-size: 0.9rem"></i>
-                  <a href="" class="no-underline text-primary" routerLink="products">Products</a>
-              </div>
-                <div class="ml-3">
-                    <i class="pi pi-home mr-1 text-primary" style="font-size: 0.9rem"></i>
-                    <a href="" class="no-underline text-primary" routerLink="baskets">Baskets</a>
-                </div>
-                
-              <div class="ml-3" *ngIf="authService.isAutenticated">
-                  <i class="pi pi-home mr-1 text-primary" style="font-size: 0.9rem"></i>
-                  <a href="" class="no-underline text-primary" routerLink="admin" >Admin</a>
-              </div>
+<div class="grid grid-nogutter border-bottom-1 bg-blue-900">
+    <div class="col-12 lg:col-4">
+        <div class="flex flex-wrap align-items-center justify-content-center lg:justify-content-start h-4rem">
+            <div class="text-white neon-text ml-3 mr-3 mb-2 mb-lg-0">
+                <i class="pi pi-home mr-1" style="font-size: 1rem"><a class="text-xl no-underline text-white ml-1" routerLink="">Home</a></i>
             </div>
-        </div>
-        <div class="col-12 md:col-12 lg:col-4">
-            <div class="font-bold h-4rem w-full align-content-center">
-                <span class="p-input-icon-left w-full">
-                    <i class="pi pi-search"></i>
-                    <input class="p-inputtext-sm surface-overlay w-full" pInputText placeholder="Search" />
-                </span>
+            <div class="text-white neon-text mr-3 mb-2 mb-lg-0">
+                <i class="pi pi-shop mr-1" style="font-size: 1rem"><a class="text-xl no-underline text-white ml-1" routerLink="products">Products</a></i>
             </div>
-        </div>
-        <div class="col-12 md:col-12 lg:col-4 flex justify-content-end align-content-center">
-            <div class=" pr-3 border-round-sm font-bold align-content-center">
-                <p-button icon="pi pi-user-plus" label="Sign-in/Log-in" [outlined]="true" routerLink="login" *ngIf="!authService.isAutenticated"/>
-                <p-button icon="pi pi-user-plus" label="Logout" [outlined]="true" *ngIf="authService.isAutenticated" (click)="onLogout()"/>
+            <div class="text-white neon-text transition-duration-300 mb-2 mb-lg-0" *ngIf="authService.isAuthenticated">
+                <i class="pi pi-shield mr-1" style="font-size: 1rem"><a class="text-xl no-underline text-white ml-1" routerLink="admin">Admin</a></i>
             </div>
         </div>
     </div>
-    <router-outlet></router-outlet>
-    <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#fff" type = "ball-clip-rotate" [fullScreen] = "true"></ngx-spinner>
-    <p-toast></p-toast>
-    <p-confirmDialog></p-confirmDialog>
+    <div class="col-12 lg:col-4 mt-3 lg:mt-0">
+        <div class="font-bold h-4rem w-full flex align-items-center justify-content-center">
+            <span class="p-input-icon-left w-11 md:w-8">
+                <i class="pi pi-search" style="color: slateblue"></i>
+                <input class="p-inputtext-sm surface-overlay w-full" pInputText placeholder="Search" />
+            </span>
+        </div>
+    </div>
+    <div class="col-12 lg:col-4 mt-3 lg:mt-0">
+        <div class="flex flex-wrap justify-content-center lg:justify-content-end align-items-center h-4rem">
+            <div class="mr-3 mb-2 mb-lg-0">
+                <p-button
+                    label="Basket"
+                    icon="pi pi-shopping-cart"
+                    severity="contrast"
+                    [badge]="basketItemLength"
+                    styleClass="text-base text-white neon-text"
+                    badgeClass="p-badge-danger"
+                    routerLink="baskets"
+                    [text]="true"
+                />
+                <p-button
+                    icon="pi pi-chevron-down"
+                    styleClass="text-base text-white neon-text"
+                    pTooltip="Basket"
+                    [text]="true"
+                    severity="contrast"
+                    (onClick)="loadComponent(op.toggle($event))"
+                />
+            </div>
+            <div class="mb-2 mr-3 mb-lg-0">
+                @if(!authService.isAuthenticated){
+                    <p-button icon="pi pi-user-plus" label="Sign-in/Log-in" [outlined]="true" routerLink="login" styleClass="text-white"/>
+                }@else {
+                    <p-button icon="pi pi-user-plus" label="Logout" [rounded]="true" severity="danger" (click)="onLogout()"/>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="default" color="#fff" type="ball-clip-rotate" [fullScreen]="true"></ngx-spinner>
+<p-toast></p-toast>
+<p-confirmDialog></p-confirmDialog>
+<p-overlayPanel #op [style]="{ width: '450px' }" [showCloseIcon]="true">
+    <ng-template appDynamicLoadComponent></ng-template>
+</p-overlayPanel>
+
+<!-- <div class="grid border-bottom-1 bg-blue-900">
+    <div class="col-12 lg:col-4">
+        
+        <div class="flex lg:hidden justify-content-center align-items-center h-4rem">
+            <p-menu #menu [model]="menuItems" [popup]="true"></p-menu>
+            <p-button icon="pi pi-bars" (click)="menu.toggle($event)" styleClass="text-white"></p-button>
+        </div>
+        
+        
+        <div class="hidden lg:flex align-items-center justify-content-start h-4rem">
+            <div class="text-white neon-text mr-3" *ngFor="let item of menuItems">
+                <i [class]="item.icon + ' mr-1'" style="font-size: 1rem">
+                    <a class="text-xl no-underline text-white ml-1" [routerLink]="item.routerLink">{{item.label}}</a>
+                </i>
+            </div>
+        </div>
+    </div>
+    
+   
+    <div class="col-12 lg:col-4 mt-3 lg:mt-0">
+        <div class="font-bold h-4rem w-full flex align-items-center justify-content-center">
+            <span class="p-input-icon-left w-11 md:w-8">
+                <i class="pi pi-search" style="color: slateblue"></i>
+                <input class="p-inputtext-sm surface-overlay w-full" pInputText placeholder="Search" />
+            </span>
+        </div>
+    </div>
+    
+    
+    <div class="col-12 lg:col-4 mt-3 lg:mt-0">
+        <div class="flex flex-wrap justify-content-center lg:justify-content-end align-items-center h-4rem">
+            <div class="mr-3 mb-2 mb-lg-0">
+                <p-button
+                    label="Basket"
+                    icon="pi pi-shopping-cart"
+                    severity="contrast"
+                    [badge]="basketItemLength"
+                    styleClass="text-base text-white neon-text"
+                    badgeClass="p-badge-danger"
+                    routerLink="baskets"
+                    [text]="true"
+                />
+                <p-button
+                    icon="pi pi-chevron-down"
+                    styleClass="text-base text-white neon-text"
+                    pTooltip="Basket"
+                    [text]="true"
+                    severity="contrast"
+                    (onClick)="loadComponent(op.toggle($event))"
+                />
+            </div>
+            <div class="mb-2 mb-lg-0">
+                @if(!authService.isAuthenticated){
+                    <p-button icon="pi pi-user-plus" label="Sign-in/Log-in" [outlined]="true" routerLink="login" styleClass="text-white"/>
+                }@else {
+                    <p-button icon="pi pi-user-plus" label="Logout" [rounded]="true" severity="danger" (click)="onLogout()"/>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="default" color="#fff" type="ball-clip-rotate" [fullScreen]="true"></ngx-spinner>
+<p-toast></p-toast>
+<p-confirmDialog></p-confirmDialog>
+<p-overlayPanel #op [style]="{ width: '450px' }" [showCloseIcon]="true">
+    <ng-template appDynamicLoadComponent></ng-template>
+</p-overlayPanel> -->

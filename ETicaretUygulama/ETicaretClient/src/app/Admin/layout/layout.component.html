@@ -1,8 +1,14 @@
 <div class="grid grid-nogutter">
     <div class="col-12 md:col-12 lg:col-1 transition-duration-300" [classList]="addClass.addClassSideBar">
         <div class="card flex justify-content-start">
-            <p-sidebar #sidebarRef [(visible)]="sidebarVisible" [style]="divStyle" modal="false" [fullScreen]="false"
-                transitionOptions="200ms cubic-bezier(0, 0, 0.4, 1)">
+            <p-sidebar 
+            #sidebarRef 
+            [(visible)]="sidebarVisible" 
+            modal="false" 
+            [dismissible]="true"
+            [fullScreen]="false"
+            transitionOptions="200ms cubic-bezier(0, 0, 0.4, 1)"
+            styleClass="shadow-1 flex lg:w-15rem sm:w-30rem">
                 <ng-template pTemplate="headless">
                     <div class="flex flex-column h-full">
                         <div class="flex align-items-center justify-content-between px-4 pt-3 flex-shrink-0">
@@ -62,13 +68,6 @@
                                         <li>
                                             <a pRipple routerLink="orders"
                                                 class="flex align-items-center cursor-pointer no-underline p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
-                                                <i class="pi pi-cart-plus mr-2"></i>
-                                                <span class="font-medium">Order Create</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a pRipple routerLink="orders"
-                                                class="flex align-items-center cursor-pointer no-underline p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
                                                 <i class="pi pi-list-check mr-2"></i>
                                                 <span class="font-medium">Order List</span>
                                             </a>
@@ -118,17 +117,24 @@
                                     </div>
                                     <ul class="list-none p-0 m-0 overflow-hidden">
                                         <li>
-                                            <a pRipple
-                                                class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
-                                                <i class="pi pi-folder mr-2"></i>
-                                                <span class="font-medium">Projects</span>
+                                            <a pRipple routerLink="authorize-menu"
+                                                class="flex align-items-center cursor-pointer no-underline p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                                <i class="pi pi-crown mr-2"></i>
+                                                <span class="font-medium">Role Setting</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a pRipple
-                                                class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
-                                                <i class="pi pi-chart-bar mr-2"></i>
-                                                <span class="font-medium">Performance</span>
+                                            <a pRipple routerLink="roles"
+                                                class="flex align-items-center cursor-pointer no-underline p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                                <i class="pi pi-crown mr-2"></i>
+                                                <span class="font-medium">Role Create/List</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a pRipple routerLink="users"
+                                                class="flex align-items-center cursor-pointer no-underline p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                                                <i class="pi pi-crown mr-2"></i>
+                                                <span class="font-medium">User Setting</span>
                                             </a>
                                         </li>
                                         <li>
@@ -154,7 +160,7 @@
                     </div>
                 </ng-template>
             </p-sidebar>
-            <button class="transition-duration-500" (click)="showSideBar()" id="sidebarButton"><i class="pi pi-align-justify"
+            <button class="transition-duration-500 z-0" (click)="showSideBar()" id="sidebarButton"><i class="pi pi-align-justify"
                     style="color: rgb(0, 0, 0)"></i></button>
         </div>
     </div>

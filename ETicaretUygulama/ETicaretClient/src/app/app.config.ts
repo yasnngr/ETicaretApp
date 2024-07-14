@@ -8,7 +8,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideToastr } from 'ngx-toastr';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { JwtModule } from '@auth0/angular-jwt';
-import { getTokenFunck } from './Services/common/tokenGetter/getTokenFunc';
+import { getTokenFunck } from './Services/common/tokenGetter/tokenFunc';
 import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
 import { HttpErrorHandlerInterceptorService } from './Services/common/http-error-handler-interceptor.service';
 
@@ -21,12 +21,13 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideHttpClient(withFetch(),withInterceptorsFromDi()),
     provideToastr(),
-    {provide:"baseUrl",useValue:"************************",multi:true},
+    {provide:"baseUrl",useValue:"https://localhost:7243/api",multi:true},
+    {provide:"baseSignalRUrl",useValue:"https://localhost:7243/",multi:true},
     importProvidersFrom(
       JwtModule.forRoot({
         config:{
           tokenGetter:getTokenFunck,
-          allowedDomains:["************************"]
+          allowedDomains:["localhost:7243"]
         }
       })
     ),
@@ -36,7 +37,7 @@ export const appConfig: ApplicationConfig = {
       providers: [
         {
           id: GoogleLoginProvider.PROVIDER_ID,
-          provider: new GoogleLoginProvider("********************************************************")
+          provider: new GoogleLoginProvider("344736073278-r96kjq5v0m1rqk004inb5ii1nkn60t1g.apps.googleusercontent.com")
         }
       ],
       onError: err => console.log(err)
@@ -44,6 +45,6 @@ export const appConfig: ApplicationConfig = {
     {provide:HTTP_INTERCEPTORS,useClass:HttpErrorHandlerInterceptorService, multi:true},
     MessageService,
     ConfirmationService,
-    SocialLoginModule
+    SocialLoginModule,
   ]
 };

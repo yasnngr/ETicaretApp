@@ -12,6 +12,8 @@ import { Create_User } from '../../../Contracts/Users/Create_User';
 import { NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SpinnerService } from '../../../Services/admin/spinner/spinner.service';
+import { finalize } from 'rxjs';
+import { PasswordValidationService } from '../../../Services/common/validation/password-validation.service';
 
 @Component({
   selector: 'app-register',
@@ -24,7 +26,8 @@ export class RegisterComponent implements OnInit{
   
   registerForm!:FormGroup;
 
-  constructor(private formBuilder:FormBuilder, private userService:UserService,private alertService:AlertService,private spinnerService:SpinnerService) {
+  constructor(private formBuilder:FormBuilder, private userService:UserService,private alertService:AlertService,
+    private spinnerService:SpinnerService,private passwordValidationService:PasswordValidationService) {
     
   }
 
@@ -76,44 +79,18 @@ export class RegisterComponent implements OnInit{
     return Validators.pattern(/(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{5,}/);
   }
 
-  get hasUpperCase() {
-    const password = this.password?.value;
-    return password ? /[A-Z]/.test(password) : false;
-  }
-  
-  get hasNumber() {
-    const password = this.password?.value;
-    return password ? /\d/.test(password) : false;
-  }
-  
-  get hasSpecialChar() {
-    const password = this.password?.value;
-    return password ? /[\W_]/.test(password) : false;
-  }
-  getPasswordValidationClass(condition: string) {
-    const password = this.password?.value;
-    
-    if (!password) {
-      return 'text-gray-600 text-sm mr-2  transition-duration-300';
-    }
-
-    switch (condition) {
-      case 'hasUpperCase':
-        return this.hasUpperCase ? 'text-green-400 pi pi-check text-sm mr-2 transition-duration-300' : 'text-red-400 pi pi-times text-sm mr-3 transition-duration-300';
-      case 'hasNumber':
-        return this.hasNumber ? 'text-green-400 pi pi-check text-sm mr-2 transition-duration-300' : 'text-red-400 pi pi-times text-sm mr-3 transition-duration-300';
-      case 'hasSpecialChar':
-        return this.hasSpecialChar ? 'text-green-400 pi pi-check text-sm mr-2 transition-duration-300' : 'text-red-400 pi pi-times text-sm mr-3 transition-duration-300';
-      default:
-        return 'text-gray-600 text-sm mr-2  transition-duration-300';
-    }
+  getPasswordValidation(condition: string) {
+    return this.passwordValidationService.getPasswordValidationClass(condition,this.password?.value || "")
   }
 
   onSubmit(userInfo:User){
     this.spinnerService.showSpinner()
-    this.userService.create(userInfo).subscribe({
-      next:(response)=>{
+    this.userService.create(userInfo).pipe(
+      finalize(()=>{
         this.spinnerService.hideSpinner()
+      })
+    ).subscribe({
+      next:(response)=>{
         if(response.success){
         this.alertService.successMessage(response.message)
       }else{
@@ -121,7 +98,6 @@ export class RegisterComponent implements OnInit{
       }
       },
       error:(err)=>{
-        this.spinnerService.hideSpinner()
         this.alertService.errorMessage(err.error.message)
       }
     })

@@ -1,0 +1,56 @@
+<p-dialog 
+header="Header" 
+[(visible)]="dialogVisible" 
+[modal]="true" 
+[style]="{ width: '30vw' }">
+    <ng-template pTemplate="header">
+        <div class="inline-flex align-items-center justify-content-center gap-2">
+            <p-badge [value]="selectedRoles.length" badgeSize="large" severity="warning" />
+        </div>
+    </ng-template>
+    <div *ngFor="let role of roles" class="field-checkbox h-3rem">
+        <p-checkbox 
+            [(ngModel)]="selectedRoles"
+            [label]="role" 
+            name="group" 
+            [value]="role"/>
+    </div>
+    <ng-template pTemplate="footer">
+        <p-button 
+            label="Cancel" 
+            [text]="true" 
+            severity="secondary" 
+            (onClick)="dialogVisible = false" />
+        <p-button 
+            label="Save" 
+            [outlined]="true" 
+            severity="secondary" 
+            (onClick)="assimgRole()" 
+          />
+    </ng-template>
+</p-dialog>
+
+<!-- <p-dialog 
+        [header]="" 
+        [resizable]="false" 
+        [modal]="true" 
+        appendTo="body" 
+        [(visible)]="dialogVisible" 
+        [style]="{width: '30vw'}"
+        [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
+        >
+        <div class="flex justify-content-between">
+            <p-button label="To Assign" [outlined]="true" severity="danger" (onClick)="assimgRole()" />
+            <p-badge [value]="selectedRoles.length" badgeSize="large" severity="warning" />
+        </div>
+        <div *ngFor="let role of roles" class="field-checkbox h-3rem">
+            <p-checkbox 
+                [(ngModel)]="selectedRoles"
+                [label]="role" 
+                name="group" 
+                [value]="role"/>
+        </div>
+        <div>
+        </div>
+
+    </p-dialog> -->

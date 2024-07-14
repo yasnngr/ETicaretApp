@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\core\\eticaretapi.application\\features\\queries\\basket\\getbasketitems\\getbasketitemsqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\features\\queries\\basket\\getbasketitems\\getbasketitemsqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\core\\eticaretapi.application\\features\\queries\\basket\\getbasketitems\\getbasketitemsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\features\\queries\\basket\\getbasketitems\\getbasketitemsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\core\\eticaretapi.application\\features\\queries\\basket\\getbasketitems\\getbasketitemsqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\features\\queries\\basket\\getbasketitems\\getbasketitemsqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEB49AF6-2FC6-4B57-A9AE-EC9C9C01CF59}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\infrastructure\\eticaretapi.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEB49AF6-2FC6-4B57-A9AE-EC9C9C01CF59}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|solutionrelative:infrastructure\\eticaretapi.persistence\\services\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\core\\eticaretapi.application\\features\\queries\\product\\gelallproduct\\getallproductqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\features\\queries\\product\\gelallproduct\\getallproductqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\core\\eticaretapi.application\\features\\queries\\product\\gelallproduct\\getallproductqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\features\\queries\\product\\gelallproduct\\getallproductqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{613FD091-C5D8-44C2-A351-07132F30ADF1}|ETicaretAPI.API\\ETicaretAPI.API.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\eticaretapi.api\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{613FD091-C5D8-44C2-A351-07132F30ADF1}|ETicaretAPI.API\\ETicaretAPI.API.csproj|solutionrelative:eticaretapi.api\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\core\\eticaretapi.application\\features\\queries\\product\\gelallproduct\\getallproductqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\features\\queries\\product\\gelallproduct\\getallproductqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{613FD091-C5D8-44C2-A351-07132F30ADF1}|ETicaretAPI.API\\ETicaretAPI.API.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\eticaretapi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{613FD091-C5D8-44C2-A351-07132F30ADF1}|ETicaretAPI.API\\ETicaretAPI.API.csproj|solutionrelative:eticaretapi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\core\\eticaretapi.application\\features\\queries\\productimagefile\\getproductimages\\getproductimagesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\features\\queries\\productimagefile\\getproductimages\\getproductimagesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\core\\eticaretapi.application\\features\\queries\\productimagefile\\getproductimages\\getproductimagesqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\features\\queries\\productimagefile\\getproductimages\\getproductimagesqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\core\\eticaretapi.application\\features\\queries\\productimagefile\\getproductimages\\getproductimagesqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23D53766-B896-4A70-A1B9-F7D8E61E5081}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\features\\queries\\productimagefile\\getproductimages\\getproductimagesqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{613FD091-C5D8-44C2-A351-07132F30ADF1}|ETicaretAPI.API\\ETicaretAPI.API.csproj|e:\\yaz\u0131l\u0131m\\eticaretuygulama\\eticaretapi\\eticaretapi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{613FD091-C5D8-44C2-A351-07132F30ADF1}|ETicaretAPI.API\\ETicaretAPI.API.csproj|solutionrelative:eticaretapi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,92 +38,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\appsettings.json",
-              "RelativeDocumentMoniker": "ETicaretAPI.API\\appsettings.json",
-              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\appsettings.json",
-              "RelativeToolTip": "ETicaretAPI.API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-23T11:21:52.798Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GetAllProductQueryRequest.cs",
-              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryRequest.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryRequest.cs",
-              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryRequest.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryRequest.cs",
+              "Title": "GetBasketItemsQueryRequest.cs",
+              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryRequest.cs",
+              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryRequest.cs",
+              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryRequest.cs",
+              "RelativeToolTip": "Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T10:33:15.819Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetAllProductQueryResponse.cs",
-              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryResponse.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryResponse.cs",
-              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryResponse.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T10:33:14.373Z"
+              "WhenOpened": "2024-07-14T19:05:08.747Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GetBasketItemsQueryResponse.cs",
+              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryResponse.cs",
+              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryResponse.cs",
+              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryResponse.cs",
+              "RelativeToolTip": "Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T19:26:04.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetBasketItemsQueryHandler.cs",
+              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryHandler.cs",
+              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryHandler.cs",
+              "RelativeToolTip": "Core\\ETicaretAPI.Application\\Features\\Queries\\Basket\\GetBasketItems\\GetBasketItemsQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T18:54:24.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BasketService.cs",
+              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\Services\\BasketService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Persistence\\Services\\BasketService.cs",
+              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\Services\\BasketService.cs",
+              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Persistence\\Services\\BasketService.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAIA1wFcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T19:44:27.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BasketController.cs",
+              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\Controllers\\BasketController.cs",
+              "RelativeDocumentMoniker": "ETicaretAPI.API\\Controllers\\BasketController.cs",
+              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\Controllers\\BasketController.cs",
+              "RelativeToolTip": "ETicaretAPI.API\\Controllers\\BasketController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T18:54:10.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GetAllProductQueryHandler.cs",
               "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryHandler.cs",
               "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryHandler.cs",
               "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryHandler.cs",
               "RelativeToolTip": "Core\\ETicaretAPI.Application\\Features\\Queries\\Product\\GelAllProduct\\GetAllProductQueryHandler.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAqwCAAAAAjAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T10:33:11.232Z",
+              "WhenOpened": "2024-07-14T18:44:48.922Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "GetProductImagesQueryResponse.cs",
-              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryResponse.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryResponse.cs",
-              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryResponse.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "ETicaretAPI.API\\Controllers\\ProductsController.cs",
+              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\ETicaretAPI.API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "ETicaretAPI.API\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAABSAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T20:27:09.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetProductImagesQueryRequest.cs",
-              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryRequest.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryRequest.cs",
-              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryRequest.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T21:02:21.285Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetProductImagesQueryHandler.cs",
-              "DocumentMoniker": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryHandler.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryHandler.cs",
-              "ToolTip": "E:\\Yaz\u0131l\u0131m\\ETicaretUygulama\\ETicaretAPI\\Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryHandler.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Application\\Features\\Queries\\ProductImageFile\\GetProductImages\\GetProductImagesQueryHandler.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T20:56:18.666Z"
+              "WhenOpened": "2024-07-14T18:44:00.147Z",
+              "EditorCaption": ""
             }
           ]
         }

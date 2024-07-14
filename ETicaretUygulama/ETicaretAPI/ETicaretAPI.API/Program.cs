@@ -1,5 +1,6 @@
 using ETicaretAPI.API.Configuration.ColumnWriters;
 using ETicaretAPI.API.Extensions;
+using ETicaretAPI.API.Filters;
 using ETicaretAPI.Application;
 using ETicaretAPI.Application.Validators.Products;
 using ETicaretAPI.Infrastructure;
@@ -23,6 +24,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpContextAccessor();//clientten gelen request neticesinde oluþturulan  httpcontext nesnesine katmanlardaki class'lar üzerinden eriþebilmesine iþe yarar
 builder.Services.AddPersistenceServices();
 builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationService();
@@ -65,7 +67,11 @@ builder.Services.AddHttpLogging(logging =>
     logging.ResponseBodyLogLimit = 4096;
 });
 
-builder.Services.AddControllers(option=>option.Filters.Add<ValidationFilter>())
+builder.Services.AddControllers(option =>
+{
+    option.Filters.Add<ValidationFilter>();
+    option.Filters.Add<RolePermissionFilter>();
+})
     .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true);
 
 builder.Services.AddFluentValidationAutoValidation();
@@ -88,6 +94,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidIssuer = builder.Configuration["Token:Issuer"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"])),
             LifetimeValidator = (notBefore, expires, securityToken, validationParameters) => expires != null ? expires > DateTime.UtcNow:false,
+            
             NameClaimType = ClaimTypes.Name //jwt üzeride Name parametresine gelen deðeri User.Identity.Name propertysinden elde edebilmekteyiz
         };
     });

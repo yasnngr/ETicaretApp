@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
@@ -36,11 +36,9 @@ export class LoginComponent implements OnInit {
     private router: Router, private socialAuthService: SocialAuthService, private userAuthService: UserAuthService) 
     {
     socialAuthService.authState.subscribe((user: SocialUser) => {
-      console.log(user)
       this.spinnerService.showSpinner()
       this.userAuthService.googleLogin(user).subscribe({
         next: (res) => {
-          console.log(res)
           if (res) {
             localStorage.setItem("accessToken", res.token.accessToken)
             localStorage.setItem("refleshToken", res.token.refleshToken)
@@ -52,7 +50,6 @@ export class LoginComponent implements OnInit {
           this.alertService.successMessage("Login with Google")
         },
         error: (err) => {
-          console.log(err)
           this.spinnerService.hideSpinner()
           this.alertService.errorMessage(err)
         }
@@ -81,7 +78,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("accessToken", res.token.accessToken);
         localStorage.setItem("refleshToken", res.token.refleshToken);
         // localStorage.setItem("expiration", res.token.expiration.toString());
-        this.authService.identityCheck();
+        // this.authService.identityCheck();
         this.activetedRouter.queryParams.subscribe(params => {
           const returnUrl: string = params["returnUrl"]
           if (!returnUrl)
@@ -97,4 +94,6 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+
+ 
 }

@@ -2,12 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClientService } from '../http-client.service';
 import { User } from '../../../Entities/user';
 import { Create_User } from '../../../Contracts/Users/Create_User';
-import { Observable, firstValueFrom, map } from 'rxjs';
-import { User_Login } from '../../../Contracts/Users/User_Login';
+import { Observable, map } from 'rxjs';
 import { AlertService } from '../../admin/alert.service';
-import { Token_Response } from '../../../Contracts/token/Token_Response';
 import { SpinnerService } from '../../admin/spinner/spinner.service';
-import { SocialUser } from '@abacritt/angularx-social-login';
+import { List_Users } from '../../../Contracts/Users/List_Users';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +28,36 @@ export class UserService {
       })
     )
   }
+
+  updatePassword(userId:string,resetToken:string,password:string,confirmPassword:string):Observable<any>{
+   return this.httpClientService.post({
+      controller:"users",
+      action: "update-password"
+    },{userId:userId,
+      resetToken:resetToken,
+      password:password,
+      confirmPassword:confirmPassword})
+  }
+
+  getAllUsers(page:number=0,size:number=5):Observable<List_Users>{
+    return this.httpClientService.get<List_Users>({
+      controller : "users",
+      queryString : `page=${page}&size=${size}`
+    })
+  }
+
+  assignRoleToUser(id : string, roles : string[]){
+    return this.httpClientService.post({
+      controller: "users",
+      action : "assign-role-to-user"
+    },{userId:id,roles:roles})
+  }
   
+  getRolesToUser(userId : string):Observable<{userRoles:string[]}>{
+    return this.httpClientService.get<{userRoles:string[]}>({
+      controller : "users",
+      action : "get-roles-to-user"
+    },userId)
+  }
  
 }

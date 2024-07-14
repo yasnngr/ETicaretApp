@@ -1,0 +1,36 @@
+<p-table 
+    [value]="orders" 
+    [tableStyle]="{ 'min-width': '50rem' }"
+    [paginator]="true"
+    [rows]="5"
+    [rowsPerPageOptions]="[5, 10, 20]"
+    [totalRecords]="totalOrderCount"
+    [lazy]="true"
+    (onLazyLoad)="lazyLoadPagination($event)"
+    styleClass="sm:text-sm md:text-base lg:text-lg "
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+    [showCurrentPageReport]="true">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Order Code</th>
+            <th>Username</th>
+            <th>Total Price</th>
+            <th>Created Date</th>
+            <th style="width: 1rem"></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-order>
+        <tr>
+                
+            <td><i [class]="order.completed ? 'pi pi-check-circle mr-2' : 'pi pi-circle mr-2'" style="color: green"></i> {{  order.orderCode }}</td>
+            <td>{{ order.userName }}</td>
+            <td>{{ order.totalPrice |currency:"₺" }}</td>
+            <td>{{ order.createdDate | date : 'short' }}</td>
+            <td class="flex">
+                <p-button icon="pi pi-eye" (onClick)="orderDetail.openDialogPanel(order.id)" [rounded]="true" [text]="true" [severity]="'info'" />
+                <p-button icon="pi pi-times" [rounded]="true" [text]="true" [severity]="'danger'" />
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<app-order-detail-dialog #orderDetail></app-order-detail-dialog>

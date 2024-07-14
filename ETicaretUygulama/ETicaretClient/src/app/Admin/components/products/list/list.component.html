@@ -22,11 +22,11 @@
         [lazy]="true"
         (onLazyLoad)="lazyLoadPagination($event)"
         [totalRecords]="totalCount"
-        [globalFilterFields]="['name', 'country.name', 'representative.name', 'status']"
         [tableStyle]="{ 'min-width': '75rem' }" 
         [(selection)]="selectedProducts" 
         [rowHover]="true" 
         dataKey="id"
+        styleClass="sm:text-sm md:text-base lg:text-lg "
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
         [showCurrentPageReport]="true">
         <ng-template pTemplate="caption">
@@ -61,7 +61,7 @@
                 <!-- <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="50" class="shadow-4" /></td> -->
                 <td>{{ product.price }}</td>
                 <td>{{ product.stock }}</td>
-                <td>{{ product.createdDate }}</td>
+                <td> {{ product.createdDate | date : 'short'}}</td>
                 <td>{{ product.updatedDate }}</td>
                 <td>
                     <app-edit-product #editProductFunc></app-edit-product>
