@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -17,6 +17,8 @@ import { BasketService } from './Services/common/models/basket.service';
 import { MenuItem } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
 import { localStorageClear } from './Services/common/tokenGetter/tokenFunc';
+import { Subscription } from 'rxjs';
+import { count } from 'console';
 
 @Component({
   selector: 'app-root',
@@ -29,23 +31,26 @@ import { localStorageClear } from './Services/common/tokenGetter/tokenFunc';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent  implements OnInit{
+export class AppComponent  implements OnInit,OnDestroy{
   menuItems: MenuItem[];
+  basketItemLength:string;
+  private basketSubscription : Subscription;
 
   @ViewChild(DynamicLoadComponentDirective,{static:true}) dynamicLoadComponentDirective:DynamicLoadComponentDirective
 
-  basketItemLength:string;
 
   constructor(public authService: AuthService, private router: Router,
     private dynamicLoadComponentService:DynamicLoadComponentService,
     private basketService:BasketService) {
     authService.identityCheck()
   }
+ 
   ngOnInit(): void {
     if(this.authService.isAuthenticated){
-      this.basketService.get().subscribe(res=>{
-        this.basketItemLength = res.length.toString()
+      this.basketSubscription = this.basketService.basketItemCountSubject$.subscribe(count=>{
+        this.basketItemLength = count.toString();
       })
+
     }
     // this.menuItems = [
     //   { label: 'Home', icon: 'pi pi-home', routerLink: [''] },
@@ -61,6 +66,10 @@ export class AppComponent  implements OnInit{
   
   loadComponent(deneme:any){
     this.dynamicLoadComponentService.loadComponent(ComponentType.DropdownBasketsComponent,this.dynamicLoadComponentDirective.viewContainerRef)
+  }
+
+  ngOnDestroy(): void {
+   
   }
 
 }

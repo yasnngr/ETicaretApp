@@ -51,18 +51,13 @@ export class BasketsComponent implements OnInit, OnDestroy {
   }
 
   getBasketItems() {
-    this.spinnerService.showSpinner();
-    const sub = this.basketService.get().pipe(
-      finalize(() => this.spinnerService.hideSpinner())
-    ).subscribe({
-      next: (res) => this.basketItemsSubject.next(res),
-      error: (err) => this.alertService.errorMessage(err)
+    const sub = this.basketService.get().subscribe({
+      next: (res) => this.basketItemsSubject.next(res)
     });
     this.subscriptions.add(sub);
   }
 
   changeQuantity(basketItemId: string, quantity: string) {
-    this.spinnerService.showSpinner();
     const parseQuantity : number = parseInt(quantity)
     const basketItemObject: Update_Basket_Item = {
       basketItemId,
@@ -72,9 +67,7 @@ export class BasketsComponent implements OnInit, OnDestroy {
       this.removeBasketItem(basketItemId)
       return;
     }
-    const sub = this.basketService.updateQuantity(basketItemObject).pipe(
-      finalize(() => this.spinnerService.hideSpinner())
-    ).subscribe({
+    const sub = this.basketService.updateQuantity(basketItemObject).subscribe({
       next: () => {
         this.updateLocalBasketItemQuantity(basketItemId, basketItemObject.quantity)
         this.getBasketItems()
@@ -151,83 +144,3 @@ export class BasketsComponent implements OnInit, OnDestroy {
     return this.basketItemsSubject.value.reduce((total, item) => total + item.price, 0);
   }
 }
-
-
-
-// export class BasketsComponent implements OnInit{
-//   basketItems : List_Basket_Item[];
-//   basketItems$: Observable<List_Basket_Item[]>;
-//   private basketItemsSubject = new BehaviorSubject<List_Basket_Item[]>([]);
-  
-//   constructor(private basketService:BasketService,private spinnerService:SpinnerService,
-//     private alertService:AlertService, private renderer2:Renderer2){
-//       this.basketItems$ = this.basketItemsSubject.asObservable();
-//     }
-  
-//   ngOnInit(): void {
-//     this.getBasketItem()
-//   }
-//   getBasketItem(){
-//     this.spinnerService.showSpinner();
-//     this.basketService.get().subscribe({
-//       next:res=>{
-//         this.basketItems = res
-//         this.basketItemsSubject.next(res);
-//         this.spinnerService.hideSpinner()
-//       },
-//       error:err=>{
-//         this.spinnerService.hideSpinner()
-//         this.alertService.errorMessage(err)
-//       }
-//     })
-//   }
-
-//   changeQuantity(basketItemId,basktetItemQuantity){
-//     this.spinnerService.showSpinner();
-//     const basketItemObject:Update_Basket_Item = new Update_Basket_Item();
-//     basketItemObject.basketItemId = basketItemId
-//     basketItemObject.quantity = parseInt(basktetItemQuantity)
-    
-//     this.basketService.updateQuantity(basketItemObject)
-//     this.updateLocalBasketItemQuantity(basketItemId, basketItemObject.quantity);
-    
-//   }
-
-//   removeBasketItem(basketItemId){
-//     this.spinnerService.showSpinner();
-//     const element = document.querySelector(`[id="${basketItemId}"]`)
-//     if(element){
-//       this.renderer2.addClass(element,'slide-out-right');
-//       const animationEndListener = this.renderer2.listen(element,'animationend',()=>{
-//         animationEndListener();
-//       })
-//       if(element.parentNode){
-//         this.renderer2.removeChild(element.parentNode,element)
-//         const nextElement = element.nextElementSibling;
-//         if (nextElement && nextElement.tagName.toLowerCase() === 'p-divider') {
-//           this.renderer2.removeChild(nextElement.parentNode, nextElement);
-//         }
-//       }
-//     }
-//     this.updateLocalBasketItems(basketItemId);
-//     this.basketService.remove(basketItemId);
-//   }
-
-//   private updateLocalBasketItems(basketItemId: string) {
-//     const currentItems = this.basketItemsSubject.value;
-//     const updatedItems = currentItems.filter(item => item.basketItemId !== basketItemId);
-//     this.basketItemsSubject.next(updatedItems);
-//   }
-
-//   private updateLocalBasketItemQuantity(basketItemId: string, quantity: number) {
-//     const currentItems = this.basketItemsSubject.value;
-//     const updatedItems = currentItems.map(item => 
-//       item.basketItemId === basketItemId ? { ...item, quantity } : item
-//     );
-//     this.basketItemsSubject.next(updatedItems);
-//   }
-
-//   totalPrice(): number {
-//     return this.basketItemsSubject.value.reduce((total, item) => total + item.price * item.quantity, 0);
-//   }
-// }

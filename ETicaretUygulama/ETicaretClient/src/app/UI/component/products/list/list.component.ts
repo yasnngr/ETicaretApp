@@ -73,7 +73,7 @@ export class ListComponent implements OnInit {
     this.basketService.add({
       productId:productId,
       quantity : 1
-    })
+    }).subscribe();
     this.spinner.hideSpinner()
   }
 }
